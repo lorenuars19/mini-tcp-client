@@ -23,7 +23,7 @@ int communicate(int sockfd)
 	hash = hash_file("./client.c");
 	while (1)
 	{
-		sprintf(buff, "? lorenuar %ld\n", hash);
+		sprintf(buff, "? lorenuar %lu\n", hash);
 		if ((send(sockfd, buff, strlen(buff),0)) == -1)
 		{
 			perror("Cannot send data");
